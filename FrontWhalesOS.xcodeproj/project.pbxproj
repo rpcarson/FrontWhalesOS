@@ -27,6 +27,7 @@
 		5B9F468E1B334E08009F45EF /* Queen of Camelot Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F46881B334DEE009F45EF /* Queen of Camelot Regular.ttf */; };
 		5B9F46901B334E44009F45EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F468F1B334E44009F45EF /* Main.storyboard */; };
 		5B9F46921B33599E009F45EF /* RailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F46911B33599E009F45EF /* RailsRequest.swift */; };
+		5BAEDC541B346BC5005A9A39 /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEDC531B346BC5005A9A39 /* Border.swift */; };
 		EF8C02D511CEE3BF7DE924AA /* Pods_FrontWhalesOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA82AB146158AAE6D1D0B0A4 /* Pods_FrontWhalesOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		5B9F468F1B334E44009F45EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5B9F46911B33599E009F45EF /* RailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequest.swift; sourceTree = "<group>"; };
 		5BA9AA671B332112008879FA /* FrontWhalesOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrontWhalesOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		5BAEDC531B346BC5005A9A39 /* Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
 		8D9F082982F05F3BC3ED2BAE /* Pods-FrontWhalesOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrontWhalesOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FrontWhalesOS/Pods-FrontWhalesOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AA82AB146158AAE6D1D0B0A4 /* Pods_FrontWhalesOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrontWhalesOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1795F5D69C7DF6BA8137564 /* Pods-FrontWhalesOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrontWhalesOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FrontWhalesOS/Pods-FrontWhalesOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				5B9F46741B334DAA009F45EF /* FancyButton.swift */,
 				5B9F46721B334D90009F45EF /* CoolField.swift */,
+				5BAEDC531B346BC5005A9A39 /* Border.swift */,
 				5B9F467F1B334DDE009F45EF /* fonts */,
 			);
 			name = Visual;
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B7D36441B330B3F0000004A /* ViewController.swift in Sources */,
+				5BAEDC541B346BC5005A9A39 /* Border.swift in Sources */,
 				5B9F46751B334DAA009F45EF /* FancyButton.swift in Sources */,
 				5B9F46921B33599E009F45EF /* RailsRequest.swift in Sources */,
 				5B9F467D1B334DC7009F45EF /* LoginVC.swift in Sources */,

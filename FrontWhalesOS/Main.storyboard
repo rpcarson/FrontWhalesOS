@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xDJ-8M-XdO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rGF-aY-jac">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -28,6 +28,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9h-Fy-WNs" customClass="Border" customModule="FrontWhalesOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="0.14902000130000001" green="0.65881997349999999" blue="0.96863001589999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klw-YS-pMg" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
                                 <rect key="frame" x="60" y="440" width="480" height="40"/>
                                 <constraints>
@@ -88,8 +103,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="klw-YS-pMg" secondAttribute="bottom" constant="120" id="6es-Hd-gN0"/>
+                            <constraint firstItem="s9h-Fy-WNs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8Mp-xI-DIM"/>
+                            <constraint firstItem="s9h-Fy-WNs" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="EbP-oj-J2F"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="s9h-Fy-WNs" secondAttribute="bottom" id="RvK-Co-MBH"/>
                             <constraint firstItem="yE2-Ou-sH1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="120" id="UlJ-B4-a3W"/>
                             <constraint firstItem="klw-YS-pMg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="60" id="VQx-t6-A6f"/>
+                            <constraint firstAttribute="trailing" secondItem="s9h-Fy-WNs" secondAttribute="trailing" id="hCf-tS-QHW"/>
                             <constraint firstAttribute="trailing" secondItem="yE2-Ou-sH1" secondAttribute="trailing" constant="60" id="oH0-cf-s9h"/>
                             <constraint firstItem="yE2-Ou-sH1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="60" id="uEd-SI-6TD"/>
                             <constraint firstAttribute="trailing" secondItem="klw-YS-pMg" secondAttribute="trailing" constant="60" id="xi2-dv-qWI"/>
@@ -113,6 +132,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRZ-pi-waa" customClass="Border" customModule="FrontWhalesOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWQ-ZG-TLx" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
                                 <rect key="frame" x="60" y="500" width="480" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -120,7 +143,7 @@
                                     <constraint firstAttribute="height" constant="40" id="FzX-OT-Fai"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Philosopher-Bold" family="Philosopher" pointSize="26"/>
-                                <state key="normal" title="REGISTER NOW!">
+                                <state key="normal" title="REGISTER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -210,18 +233,30 @@
                         <constraints>
                             <constraint firstItem="Jar-nl-Cd8" firstAttribute="leading" secondItem="jrj-BY-TwC" secondAttribute="leading" constant="60" id="8V9-no-5Cd"/>
                             <constraint firstItem="Rdj-uc-hwy" firstAttribute="top" secondItem="DvD-xE-Fpy" secondAttribute="bottom" constant="60" id="9jo-f2-Fot"/>
+                            <constraint firstAttribute="bottom" secondItem="ZRZ-pi-waa" secondAttribute="bottom" id="FyL-7p-6Du"/>
                             <constraint firstItem="Jar-nl-Cd8" firstAttribute="top" secondItem="Rdj-uc-hwy" secondAttribute="bottom" constant="30" id="Kmk-md-iwc"/>
                             <constraint firstAttribute="trailing" secondItem="LCF-i6-yao" secondAttribute="trailing" constant="60" id="NVJ-Gb-kbo"/>
+                            <constraint firstItem="ZRZ-pi-waa" firstAttribute="top" secondItem="jrj-BY-TwC" secondAttribute="top" id="SUX-DD-wh4"/>
+                            <constraint firstItem="ZRZ-pi-waa" firstAttribute="top" secondItem="Jar-nl-Cd8" secondAttribute="bottom" id="T3q-Sh-In3"/>
                             <constraint firstItem="iWQ-ZG-TLx" firstAttribute="leading" secondItem="jrj-BY-TwC" secondAttribute="leading" constant="60" id="X2i-Z8-6MU"/>
                             <constraint firstItem="tKU-r6-DNn" firstAttribute="top" secondItem="iWQ-ZG-TLx" secondAttribute="bottom" constant="60" id="evo-mZ-080"/>
+                            <constraint firstAttribute="trailing" secondItem="ZRZ-pi-waa" secondAttribute="trailing" id="exA-Or-6xM"/>
                             <constraint firstItem="Rdj-uc-hwy" firstAttribute="leading" secondItem="jrj-BY-TwC" secondAttribute="leading" constant="60" id="krX-X0-Oh2"/>
                             <constraint firstAttribute="centerX" secondItem="iWQ-ZG-TLx" secondAttribute="centerX" id="lId-kd-CTZ"/>
                             <constraint firstItem="LCF-i6-yao" firstAttribute="leading" secondItem="jrj-BY-TwC" secondAttribute="leading" constant="60" id="nIz-HQ-YOG"/>
+                            <constraint firstItem="iWQ-ZG-TLx" firstAttribute="top" secondItem="ZRZ-pi-waa" secondAttribute="bottom" id="odq-VT-Mpb"/>
+                            <constraint firstItem="ZRZ-pi-waa" firstAttribute="leading" secondItem="jrj-BY-TwC" secondAttribute="leading" id="sNp-Y5-LF9"/>
                             <constraint firstAttribute="trailing" secondItem="Rdj-uc-hwy" secondAttribute="trailing" constant="60" id="tNJ-ug-VPo"/>
                             <constraint firstAttribute="trailing" secondItem="iWQ-ZG-TLx" secondAttribute="trailing" constant="60" id="vqa-kR-rm9"/>
                             <constraint firstAttribute="trailing" secondItem="Jar-nl-Cd8" secondAttribute="trailing" constant="60" id="x2T-da-2EU"/>
                             <constraint firstItem="LCF-i6-yao" firstAttribute="top" secondItem="Jar-nl-Cd8" secondAttribute="bottom" constant="30" id="yw3-8F-RFd"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="T3q-Sh-In3"/>
+                                <exclude reference="odq-VT-Mpb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bottomConstraint" destination="evo-mZ-080" id="hrK-0e-Mui"/>
@@ -246,6 +281,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9CX-Xh-TX7" customClass="Border" customModule="FrontWhalesOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYF-Xl-2lX" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
                                 <rect key="frame" x="60" y="500" width="480" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -336,11 +375,15 @@
                             <constraint firstAttribute="trailing" secondItem="EYF-Xl-2lX" secondAttribute="trailing" constant="60" id="8T2-V5-tr9"/>
                             <constraint firstItem="dpY-nl-D7R" firstAttribute="top" secondItem="Dbk-5R-xvc" secondAttribute="bottom" constant="30" id="FS3-j7-9za"/>
                             <constraint firstItem="Dbk-5R-xvc" firstAttribute="top" secondItem="3Mw-Jm-cQB" secondAttribute="bottom" constant="60" id="IVB-e0-V5t"/>
+                            <constraint firstItem="9CX-Xh-TX7" firstAttribute="leading" secondItem="6mm-QM-NSu" secondAttribute="leading" id="Idl-WS-96o"/>
+                            <constraint firstItem="9CX-Xh-TX7" firstAttribute="top" secondItem="6mm-QM-NSu" secondAttribute="top" id="MUg-7Z-Fed"/>
                             <constraint firstAttribute="trailing" secondItem="EYF-Xl-2lX" secondAttribute="trailing" constant="60" id="SgC-sM-Wzv"/>
                             <constraint firstItem="EYF-Xl-2lX" firstAttribute="leading" secondItem="6mm-QM-NSu" secondAttribute="leading" constant="60" id="ayx-Iu-FOq"/>
                             <constraint firstAttribute="trailing" secondItem="Dbk-5R-xvc" secondAttribute="trailing" constant="60" id="kW0-aO-rn8"/>
                             <constraint firstAttribute="trailing" secondItem="dpY-nl-D7R" secondAttribute="trailing" constant="60" id="mKU-cC-UNQ"/>
                             <constraint firstItem="EYF-Xl-2lX" firstAttribute="leading" secondItem="6mm-QM-NSu" secondAttribute="leading" constant="60" id="pnB-fR-UbH"/>
+                            <constraint firstAttribute="trailing" secondItem="9CX-Xh-TX7" secondAttribute="trailing" id="qpM-B7-3fV"/>
+                            <constraint firstItem="ckG-Lm-FMF" firstAttribute="top" secondItem="9CX-Xh-TX7" secondAttribute="bottom" id="tDE-JA-Lgf"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -371,8 +414,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNd-QO-D65" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
-                                <rect key="frame" x="60" y="379" width="480" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNd-QO-D65" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
+                                <rect key="frame" x="60" y="420" width="480" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3hO-u5-SJa"/>
@@ -406,14 +449,8 @@
                                     <segue destination="rGF-aY-jac" kind="presentation" id="wO6-8M-7pq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XL-BP-Vb6">
-                                <rect key="frame" x="78" y="66" width="300" height="40"/>
-                                <fontDescription key="fontDescription" name="Philosopher-Bold" family="Philosopher" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aST-Qc-Dnt" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
-                                <rect key="frame" x="60" y="219" width="480" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aST-Qc-Dnt" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
+                                <rect key="frame" x="60" y="335" width="480" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="hCQ-Gv-isO"/>
@@ -445,15 +482,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XL-BP-Vb6">
+                                <rect key="frame" x="60" y="93" width="300" height="40"/>
+                                <fontDescription key="fontDescription" name="Philosopher-Bold" family="Philosopher" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UNd-QO-D65" secondAttribute="trailing" constant="60" id="6nS-Gi-Hp1"/>
                             <constraint firstAttribute="trailing" secondItem="aST-Qc-Dnt" secondAttribute="trailing" constant="60" id="YBA-pZ-Vx1"/>
-                            <constraint firstItem="kkn-ZW-r0g" firstAttribute="top" secondItem="UNd-QO-D65" secondAttribute="bottom" constant="180" id="bRu-Ws-fuo"/>
+                            <constraint firstItem="kkn-ZW-r0g" firstAttribute="top" secondItem="UNd-QO-D65" secondAttribute="bottom" constant="140" id="bRu-Ws-fuo"/>
                             <constraint firstItem="aST-Qc-Dnt" firstAttribute="leading" secondItem="dfb-Y7-AkZ" secondAttribute="leading" constant="60" id="e1z-b5-ayv"/>
                             <constraint firstItem="UNd-QO-D65" firstAttribute="leading" secondItem="dfb-Y7-AkZ" secondAttribute="leading" constant="60" id="irs-X3-0IB"/>
-                            <constraint firstItem="UNd-QO-D65" firstAttribute="top" secondItem="aST-Qc-Dnt" secondAttribute="bottom" constant="120" id="kiv-ZD-lKE"/>
+                            <constraint firstItem="UNd-QO-D65" firstAttribute="top" secondItem="aST-Qc-Dnt" secondAttribute="bottom" constant="45" id="kiv-ZD-lKE"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -473,8 +516,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vo7-Kz-kDw">
+                                <rect key="frame" x="45" y="50" width="510" height="360"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GN-vH-P3x" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
-                                <rect key="frame" x="60" y="440" width="480" height="40"/>
+                                <rect key="frame" x="60" y="500" width="480" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GAg-tq-HkI"/>
@@ -506,21 +552,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vo7-Kz-kDw">
-                                <rect key="frame" x="60" y="80" width="480" height="300"/>
-                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGy-fC-sxr">
+                                <rect key="frame" x="60" y="430" width="480" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Uxz-kC-2te"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2GN-vH-P3x" firstAttribute="leading" secondItem="gOg-my-lp8" secondAttribute="leading" constant="60" id="0kK-XC-Ou5"/>
-                            <constraint firstItem="Vo7-Kz-kDw" firstAttribute="leading" secondItem="gOg-my-lp8" secondAttribute="leading" constant="60" id="CbD-hv-e4O"/>
-                            <constraint firstAttribute="trailing" secondItem="Vo7-Kz-kDw" secondAttribute="trailing" constant="60" id="Iad-aI-bL2"/>
-                            <constraint firstItem="Vo7-Kz-kDw" firstAttribute="top" secondItem="20M-Y3-aR8" secondAttribute="bottom" constant="60" id="KFY-7g-egs"/>
+                            <constraint firstAttribute="trailing" secondItem="LGy-fC-sxr" secondAttribute="trailing" constant="60" id="8Ok-uv-Eiz"/>
+                            <constraint firstItem="Vo7-Kz-kDw" firstAttribute="leading" secondItem="gOg-my-lp8" secondAttribute="leading" constant="45" id="CbD-hv-e4O"/>
+                            <constraint firstAttribute="trailing" secondItem="Vo7-Kz-kDw" secondAttribute="trailing" constant="45" id="Iad-aI-bL2"/>
+                            <constraint firstItem="Vo7-Kz-kDw" firstAttribute="top" secondItem="20M-Y3-aR8" secondAttribute="bottom" constant="30" id="KFY-7g-egs"/>
                             <constraint firstItem="2GN-vH-P3x" firstAttribute="top" secondItem="Vo7-Kz-kDw" secondAttribute="bottom" constant="60" id="R29-of-95j"/>
-                            <constraint firstItem="UQm-b8-i8u" firstAttribute="top" secondItem="2GN-vH-P3x" secondAttribute="bottom" constant="120" id="non-Q9-4Jt"/>
+                            <constraint firstItem="LGy-fC-sxr" firstAttribute="leading" secondItem="gOg-my-lp8" secondAttribute="leading" constant="60" id="SW9-ZE-7Fo"/>
+                            <constraint firstItem="LGy-fC-sxr" firstAttribute="top" secondItem="Vo7-Kz-kDw" secondAttribute="bottom" constant="20" id="VJ2-8D-dt3"/>
+                            <constraint firstItem="LGy-fC-sxr" firstAttribute="top" secondItem="Vo7-Kz-kDw" secondAttribute="bottom" constant="20" id="ZbO-hC-Chc"/>
+                            <constraint firstItem="UQm-b8-i8u" firstAttribute="top" secondItem="2GN-vH-P3x" secondAttribute="bottom" constant="60" id="non-Q9-4Jt"/>
                             <constraint firstAttribute="trailing" secondItem="2GN-vH-P3x" secondAttribute="trailing" constant="60" id="uF4-gf-CfA"/>
+                            <constraint firstItem="2GN-vH-P3x" firstAttribute="top" secondItem="LGy-fC-sxr" secondAttribute="bottom" constant="30" id="yZp-Sa-aUa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VJ2-8D-dt3"/>
+                                <exclude reference="R29-of-95j"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="non-Q9-4Jt" id="8EP-tO-Plj"/>
+                        <outlet property="imagePreview" destination="Vo7-Kz-kDw" id="7mT-Y7-IuR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TND-el-wNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

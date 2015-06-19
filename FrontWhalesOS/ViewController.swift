@@ -14,6 +14,11 @@ import AFAmazonS3Manager
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    var imagePrev: UIImage!
+    
     var myImage: UIImage!
     
     var answerString: String?
@@ -22,15 +27,36 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var imagePicker = UIImagePickerController()
     
+    @IBOutlet weak var imagePreview: UIImageView!
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        imagePreview.image = imagePrev
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+            
+            
+        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillChangeFrameNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+            
+            if let kbSize = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size {
+                
+                self.bottomConstraint.constant = 20 + kbSize.height
+            }
+            
+                }
         
         imagePicker.delegate = self
         imagePicker.sourceType = .Camera
         
         dispatch_after(DISPATCH_TIME_NOW + NSEC_PER_MSEC * 5, dispatch_get_main_queue()) { () -> Void in
             
-            self.presentViewController(self.imagePicker, animated: true, completion: nil)
+            self.presentViewController(self.imagePicker, animated: false, completion: nil)
             
         }
         
@@ -41,7 +67,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
-            saveImageToS3(image)
+//            saveImageToS3(image)
+            
+            imagePrev = image
             
         }
         
@@ -53,57 +81,57 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let s3Manager = AFAmazonS3Manager(accessKeyID: "AKIAIHUPEUNXKX7YARKA", secret: "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")
     
     
-    func saveImageToS3(image: UIImage) {
-        
-        s3Manager.requestSerializer.bucket = "frontwhalesos"
-        s3Manager.requestSerializer.region = AFAmazonS3USStandardRegion
-        
-        let timestamp = Int(NSDate().timeIntervalSince1970)
-        
-        let imageName = "myImage_\(timestamp)"
-        
-        let imageData = UIImagePNGRepresentation(image)
-        
-        //        amazonS3Manager.putObject(imageData, destinationPath: imageName + ".png", acl: nil)
-        
-        
-        if let documentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first as? String {
-            
-            let filePath = documentPath.stringByAppendingPathComponent(imageName + ".png")
-            
-            println(filePath)
-            
-            imageData.writeToFile(filePath, atomically: false)
-            
-            let fileURL = NSURL(fileURLWithPath: filePath)
-            
-            //            amazonS3Manager.putObject(fileURL!, destinationPath: imageName + ".png", acl: AmazonS3PredefinedACL.Public)
-            
-            s3Manager.putObjectWithFile(filePath, destinationPath: imageName + ".png", parameters: nil, progress: { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) -> Void in
-                
-                
-                let percentageWritten = (CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)) * 100.0
-                
-                println("Uploaded \(percentageWritten)%")
-                
-                
-                }, success: { (responseObject) -> Void in
-                    
-                    let info = responseObject as! AFAmazonS3ResponseObject
-                    
-                    println("\(info.URL)")
-                    
-                    self.imageURL = info.URL.absoluteString
-                    
-                }, failure: { (error) -> Void in
-                    
-                    println("\(error)")
-                    
-            })
-            
-        }
-        
-    }
+//        func saveImageToS3(image: UIImage) {
+//    
+//        s3Manager.requestSerializer.bucket = "frontwhalesos"
+//        s3Manager.requestSerializer.region = AFAmazonS3USStandardRegion
+//        
+//        let timestamp = Int(NSDate().timeIntervalSince1970)
+//        
+//        let imageName = "myImage_\(timestamp)"
+//        
+//        let imageData = UIImagePNGRepresentation(image)
+//        
+//        //        amazonS3Manager.putObject(imageData, destinationPath: imageName + ".png", acl: nil)
+//        
+//        
+//        if let documentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first as? String {
+//            
+//            let filePath = documentPath.stringByAppendingPathComponent(imageName + ".png")
+//            
+//            println(filePath)
+//            
+//            imageData.writeToFile(filePath, atomically: false)
+//            
+//            let fileURL = NSURL(fileURLWithPath: filePath)
+//            
+//            //            amazonS3Manager.putObject(fileURL!, destinationPath: imageName + ".png", acl: AmazonS3PredefinedACL.Public)
+//            
+//            s3Manager.putObjectWithFile(filePath, destinationPath: imageName + ".png", parameters: nil, progress: { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) -> Void in
+//                
+//                
+//                let percentageWritten = (CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)) * 100.0
+//                
+//                println("Uploaded \(percentageWritten)%")
+//                
+//                
+//                }, success: { (responseObject) -> Void in
+//                    
+//                    let info = responseObject as! AFAmazonS3ResponseObject
+//                    
+//                    println("\(info.URL)")
+//                    
+//                    self.imageURL = info.URL.absoluteString
+//                    
+//                }, failure: { (error) -> Void in
+//                    
+//                    println("\(error)")
+//                    
+//            })
+//            
+//        }
+//        
+//    }
     
     func postToRails() {
      
@@ -114,7 +142,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
         }else{
     
-            saveImageToS3(myImage)
+//            saveImageToS3(myImage)
             
             _sing.postImage(imageURL!, answer: answerString!)
         
@@ -122,6 +150,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+  
     
     
 }

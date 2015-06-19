@@ -79,14 +79,14 @@ class RailsRequest: NSObject {
         })
         
     }
-    func login() {
+    func login(username: String, password: String) {
      
         var info = [
             "method" : "POST",
             "endpoint" : "login",
             "parameters" : [
                 
-                "username" : username
+                "username" : username,
                 "password" : password
             ]
             
@@ -96,6 +96,10 @@ class RailsRequest: NSObject {
         
     }
     
+    var imageLink: UIImage?
+    var providedAnswer: String?
+    
+    
     func postImage(imageURL: String, answer: String) {
         
         var info = [
@@ -103,8 +107,8 @@ class RailsRequest: NSObject {
             "endpoint" : "posts?",
             "parameters" : [
                 
-                "imageURL" : imageURL,
-                "answer" : answer
+                "imageURL" : imageLink!,
+                "answer" : providedAnswer!
         ]
         
         ] as [String:AnyObject]
