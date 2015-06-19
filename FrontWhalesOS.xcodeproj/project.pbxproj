@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B7D36421B330B3F0000004A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D36411B330B3F0000004A /* AppDelegate.swift */; };
+		5B7D36441B330B3F0000004A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D36431B330B3F0000004A /* ViewController.swift */; };
+		5B7D36471B330B3F0000004A /* MainOld.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7D36451B330B3F0000004A /* MainOld.storyboard */; };
+		5B7D36491B330B3F0000004A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7D36481B330B3F0000004A /* Images.xcassets */; };
+		5B7D364C1B330B3F0000004A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7D364A1B330B3F0000004A /* LaunchScreen.xib */; };
+		5B7D36581B330B3F0000004A /* FrontWhalesOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D36571B330B3F0000004A /* FrontWhalesOSTests.swift */; };
+		5B9F46731B334D90009F45EF /* CoolField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F46721B334D90009F45EF /* CoolField.swift */; };
+		5B9F46751B334DAA009F45EF /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F46741B334DAA009F45EF /* FancyButton.swift */; };
+		5B9F46771B334DB7009F45EF /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F46761B334DB7009F45EF /* RegisterVC.swift */; };
+		5B9F46791B334DBD009F45EF /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F46781B334DBD009F45EF /* HomePageVC.swift */; };
+		5B9F467C1B334DC7009F45EF /* InitialRegLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F467A1B334DC7009F45EF /* InitialRegLogVC.swift */; };
+		5B9F467D1B334DC7009F45EF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F467B1B334DC7009F45EF /* LoginVC.swift */; };
+		5B9F46891B334DF2009F45EF /* mensch-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F46801B334DEE009F45EF /* mensch-bold.ttf */; };
+		5B9F468A1B334DF4009F45EF /* mensch-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F46811B334DEE009F45EF /* mensch-thin.ttf */; };
+		5B9F468B1B334DF7009F45EF /* mensch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F46821B334DEE009F45EF /* mensch.ttf */; };
+		5B9F468C1B334DFA009F45EF /* Philosopher-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F46831B334DEE009F45EF /* Philosopher-Bold.ttf */; };
+		5B9F468D1B334E03009F45EF /* Philosopher-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F46861B334DEE009F45EF /* Philosopher-Regular.ttf */; };
+		5B9F468E1B334E08009F45EF /* Queen of Camelot Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F46881B334DEE009F45EF /* Queen of Camelot Regular.ttf */; };
+		5B9F46901B334E44009F45EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F468F1B334E44009F45EF /* Main.storyboard */; };
+		5B9F46921B33599E009F45EF /* RailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F46911B33599E009F45EF /* RailsRequest.swift */; };
+		EF8C02D511CEE3BF7DE924AA /* Pods_FrontWhalesOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA82AB146158AAE6D1D0B0A4 /* Pods_FrontWhalesOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B7D36521B330B3F0000004A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B7D36341B330B3F0000004A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B7D363B1B330B3F0000004A;
+			remoteInfo = FrontWhalesOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B7D363C1B330B3F0000004A /* FrontWhalesOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrontWhalesOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B7D36401B330B3F0000004A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7D36411B330B3F0000004A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B7D36431B330B3F0000004A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B7D36461B330B3F0000004A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainOld.storyboard; sourceTree = "<group>"; };
+		5B7D36481B330B3F0000004A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5B7D364B1B330B3F0000004A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5B7D36511B330B3F0000004A /* FrontWhalesOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrontWhalesOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B7D36561B330B3F0000004A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7D36571B330B3F0000004A /* FrontWhalesOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontWhalesOSTests.swift; sourceTree = "<group>"; };
+		5B9F46721B334D90009F45EF /* CoolField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolField.swift; sourceTree = "<group>"; };
+		5B9F46741B334DAA009F45EF /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		5B9F46761B334DB7009F45EF /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		5B9F46781B334DBD009F45EF /* HomePageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		5B9F467A1B334DC7009F45EF /* InitialRegLogVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialRegLogVC.swift; sourceTree = "<group>"; };
+		5B9F467B1B334DC7009F45EF /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		5B9F46801B334DEE009F45EF /* mensch-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mensch-bold.ttf"; sourceTree = "<group>"; };
+		5B9F46811B334DEE009F45EF /* mensch-thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mensch-thin.ttf"; sourceTree = "<group>"; };
+		5B9F46821B334DEE009F45EF /* mensch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mensch.ttf; sourceTree = "<group>"; };
+		5B9F46831B334DEE009F45EF /* Philosopher-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Philosopher-Bold.ttf"; sourceTree = "<group>"; };
+		5B9F46841B334DEE009F45EF /* Philosopher-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Philosopher-BoldItalic.ttf"; sourceTree = "<group>"; };
+		5B9F46851B334DEE009F45EF /* Philosopher-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Philosopher-Italic.ttf"; sourceTree = "<group>"; };
+		5B9F46861B334DEE009F45EF /* Philosopher-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Philosopher-Regular.ttf"; sourceTree = "<group>"; };
+		5B9F46871B334DEE009F45EF /* Queen of Camelot Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Queen of Camelot Italic.ttf"; sourceTree = "<group>"; };
+		5B9F46881B334DEE009F45EF /* Queen of Camelot Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Queen of Camelot Regular.ttf"; sourceTree = "<group>"; };
+		5B9F468F1B334E44009F45EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5B9F46911B33599E009F45EF /* RailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequest.swift; sourceTree = "<group>"; };
+		5BA9AA671B332112008879FA /* FrontWhalesOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrontWhalesOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		8D9F082982F05F3BC3ED2BAE /* Pods-FrontWhalesOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrontWhalesOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FrontWhalesOS/Pods-FrontWhalesOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AA82AB146158AAE6D1D0B0A4 /* Pods_FrontWhalesOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrontWhalesOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1795F5D69C7DF6BA8137564 /* Pods-FrontWhalesOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrontWhalesOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FrontWhalesOS/Pods-FrontWhalesOS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B7D36391B330B3F0000004A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8C02D511CEE3BF7DE924AA /* Pods_FrontWhalesOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B7D364E1B330B3F0000004A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B7D36331B330B3F0000004A = {
+			isa = PBXGroup;
+			children = (
+				5B9F467E1B334DCE009F45EF /* Visual */,
+				5B7D363E1B330B3F0000004A /* FrontWhalesOS */,
+				5B7D36541B330B3F0000004A /* FrontWhalesOSTests */,
+				5B7D363D1B330B3F0000004A /* Products */,
+				C6C12753FC58F65027DBF9E5 /* Pods */,
+				C92EE0E31696B2D2D35E5FEE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B7D363D1B330B3F0000004A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B7D363C1B330B3F0000004A /* FrontWhalesOS.app */,
+				5B7D36511B330B3F0000004A /* FrontWhalesOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B7D363E1B330B3F0000004A /* FrontWhalesOS */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F46761B334DB7009F45EF /* RegisterVC.swift */,
+				5B9F46911B33599E009F45EF /* RailsRequest.swift */,
+				5B9F467A1B334DC7009F45EF /* InitialRegLogVC.swift */,
+				5B9F467B1B334DC7009F45EF /* LoginVC.swift */,
+				5B9F46781B334DBD009F45EF /* HomePageVC.swift */,
+				5B7D36431B330B3F0000004A /* ViewController.swift */,
+				5B9F468F1B334E44009F45EF /* Main.storyboard */,
+				5B7D36451B330B3F0000004A /* MainOld.storyboard */,
+				5B7D363F1B330B3F0000004A /* Supporting Files */,
+			);
+			path = FrontWhalesOS;
+			sourceTree = "<group>";
+		};
+		5B7D363F1B330B3F0000004A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B7D36411B330B3F0000004A /* AppDelegate.swift */,
+				5B7D36481B330B3F0000004A /* Images.xcassets */,
+				5B7D364A1B330B3F0000004A /* LaunchScreen.xib */,
+				5B7D36401B330B3F0000004A /* Info.plist */,
+				5BA9AA671B332112008879FA /* FrontWhalesOS-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B7D36541B330B3F0000004A /* FrontWhalesOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B7D36571B330B3F0000004A /* FrontWhalesOSTests.swift */,
+				5B7D36551B330B3F0000004A /* Supporting Files */,
+			);
+			path = FrontWhalesOSTests;
+			sourceTree = "<group>";
+		};
+		5B7D36551B330B3F0000004A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B7D36561B330B3F0000004A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B9F467E1B334DCE009F45EF /* Visual */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F46741B334DAA009F45EF /* FancyButton.swift */,
+				5B9F46721B334D90009F45EF /* CoolField.swift */,
+				5B9F467F1B334DDE009F45EF /* fonts */,
+			);
+			name = Visual;
+			path = FrontWhalesOS;
+			sourceTree = "<group>";
+		};
+		5B9F467F1B334DDE009F45EF /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F46801B334DEE009F45EF /* mensch-bold.ttf */,
+				5B9F46811B334DEE009F45EF /* mensch-thin.ttf */,
+				5B9F46821B334DEE009F45EF /* mensch.ttf */,
+				5B9F46831B334DEE009F45EF /* Philosopher-Bold.ttf */,
+				5B9F46841B334DEE009F45EF /* Philosopher-BoldItalic.ttf */,
+				5B9F46851B334DEE009F45EF /* Philosopher-Italic.ttf */,
+				5B9F46861B334DEE009F45EF /* Philosopher-Regular.ttf */,
+				5B9F46871B334DEE009F45EF /* Queen of Camelot Italic.ttf */,
+				5B9F46881B334DEE009F45EF /* Queen of Camelot Regular.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		C6C12753FC58F65027DBF9E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D9F082982F05F3BC3ED2BAE /* Pods-FrontWhalesOS.debug.xcconfig */,
+				B1795F5D69C7DF6BA8137564 /* Pods-FrontWhalesOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C92EE0E31696B2D2D35E5FEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA82AB146158AAE6D1D0B0A4 /* Pods_FrontWhalesOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B7D363B1B330B3F0000004A /* FrontWhalesOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B7D365B1B330B3F0000004A /* Build configuration list for PBXNativeTarget "FrontWhalesOS" */;
+			buildPhases = (
+				3454165E791D88639476A670 /* Check Pods Manifest.lock */,
+				5B7D36381B330B3F0000004A /* Sources */,
+				5B7D36391B330B3F0000004A /* Frameworks */,
+				5B7D363A1B330B3F0000004A /* Resources */,
+				98DAECE788EF8833FB82D6C7 /* Embed Pods Frameworks */,
+				E80CC26C026BC4A1D62EBE7D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FrontWhalesOS;
+			productName = FrontWhalesOS;
+			productReference = 5B7D363C1B330B3F0000004A /* FrontWhalesOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B7D36501B330B3F0000004A /* FrontWhalesOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B7D365E1B330B3F0000004A /* Build configuration list for PBXNativeTarget "FrontWhalesOSTests" */;
+			buildPhases = (
+				5B7D364D1B330B3F0000004A /* Sources */,
+				5B7D364E1B330B3F0000004A /* Frameworks */,
+				5B7D364F1B330B3F0000004A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B7D36531B330B3F0000004A /* PBXTargetDependency */,
+			);
+			name = FrontWhalesOSTests;
+			productName = FrontWhalesOSTests;
+			productReference = 5B7D36511B330B3F0000004A /* FrontWhalesOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B7D36341B330B3F0000004A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Reed Carson";
+				TargetAttributes = {
+					5B7D363B1B330B3F0000004A = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					5B7D36501B330B3F0000004A = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 5B7D363B1B330B3F0000004A;
+					};
+				};
+			};
+			buildConfigurationList = 5B7D36371B330B3F0000004A /* Build configuration list for PBXProject "FrontWhalesOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B7D36331B330B3F0000004A;
+			productRefGroup = 5B7D363D1B330B3F0000004A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B7D363B1B330B3F0000004A /* FrontWhalesOS */,
+				5B7D36501B330B3F0000004A /* FrontWhalesOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B7D363A1B330B3F0000004A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9F468C1B334DFA009F45EF /* Philosopher-Bold.ttf in Resources */,
+				5B9F46901B334E44009F45EF /* Main.storyboard in Resources */,
+				5B9F468A1B334DF4009F45EF /* mensch-thin.ttf in Resources */,
+				5B7D36471B330B3F0000004A /* MainOld.storyboard in Resources */,
+				5B7D364C1B330B3F0000004A /* LaunchScreen.xib in Resources */,
+				5B7D36491B330B3F0000004A /* Images.xcassets in Resources */,
+				5B9F468E1B334E08009F45EF /* Queen of Camelot Regular.ttf in Resources */,
+				5B9F468B1B334DF7009F45EF /* mensch.ttf in Resources */,
+				5B9F46891B334DF2009F45EF /* mensch-bold.ttf in Resources */,
+				5B9F468D1B334E03009F45EF /* Philosopher-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B7D364F1B330B3F0000004A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3454165E791D88639476A670 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98DAECE788EF8833FB82D6C7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FrontWhalesOS/Pods-FrontWhalesOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E80CC26C026BC4A1D62EBE7D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FrontWhalesOS/Pods-FrontWhalesOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B7D36381B330B3F0000004A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7D36441B330B3F0000004A /* ViewController.swift in Sources */,
+				5B9F46751B334DAA009F45EF /* FancyButton.swift in Sources */,
+				5B9F46921B33599E009F45EF /* RailsRequest.swift in Sources */,
+				5B9F467D1B334DC7009F45EF /* LoginVC.swift in Sources */,
+				5B9F46791B334DBD009F45EF /* HomePageVC.swift in Sources */,
+				5B9F46731B334D90009F45EF /* CoolField.swift in Sources */,
+				5B7D36421B330B3F0000004A /* AppDelegate.swift in Sources */,
+				5B9F467C1B334DC7009F45EF /* InitialRegLogVC.swift in Sources */,
+				5B9F46771B334DB7009F45EF /* RegisterVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B7D364D1B330B3F0000004A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7D36581B330B3F0000004A /* FrontWhalesOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B7D36531B330B3F0000004A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B7D363B1B330B3F0000004A /* FrontWhalesOS */;
+			targetProxy = 5B7D36521B330B3F0000004A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B7D36451B330B3F0000004A /* MainOld.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B7D36461B330B3F0000004A /* Base */,
+			);
+			name = MainOld.storyboard;
+			sourceTree = "<group>";
+		};
+		5B7D364A1B330B3F0000004A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B7D364B1B330B3F0000004A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B7D36591B330B3F0000004A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B7D365A1B330B3F0000004A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B7D365C1B330B3F0000004A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D9F082982F05F3BC3ED2BAE /* Pods-FrontWhalesOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = FrontWhalesOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FrontWhalesOS/FrontWhalesOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B7D365D1B330B3F0000004A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1795F5D69C7DF6BA8137564 /* Pods-FrontWhalesOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = FrontWhalesOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FrontWhalesOS/FrontWhalesOS-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		5B7D365F1B330B3F0000004A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FrontWhalesOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrontWhalesOS.app/FrontWhalesOS";
+			};
+			name = Debug;
+		};
+		5B7D36601B330B3F0000004A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FrontWhalesOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrontWhalesOS.app/FrontWhalesOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B7D36371B330B3F0000004A /* Build configuration list for PBXProject "FrontWhalesOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B7D36591B330B3F0000004A /* Debug */,
+				5B7D365A1B330B3F0000004A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B7D365B1B330B3F0000004A /* Build configuration list for PBXNativeTarget "FrontWhalesOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B7D365C1B330B3F0000004A /* Debug */,
+				5B7D365D1B330B3F0000004A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B7D365E1B330B3F0000004A /* Build configuration list for PBXNativeTarget "FrontWhalesOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B7D365F1B330B3F0000004A /* Debug */,
+				5B7D36601B330B3F0000004A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B7D36341B330B3F0000004A /* Project object */;
+}

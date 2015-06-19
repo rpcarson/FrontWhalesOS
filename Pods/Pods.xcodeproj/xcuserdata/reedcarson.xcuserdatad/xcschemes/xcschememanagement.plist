@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-FrontWhalesOS-AFAmazonS3Manager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FrontWhalesOS-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FrontWhalesOS-Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FrontWhalesOS-AmazonS3RequestManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FrontWhalesOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2D7776B427FC54B9AACE7CF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>80F9C208136E9EC197114464</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE09B5D981FEBA13FE5CA9C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C38DC8A1E4E18A3878110ADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E478EC57179155B001A83C3E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
