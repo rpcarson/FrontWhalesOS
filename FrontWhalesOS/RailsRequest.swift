@@ -69,42 +69,88 @@ class RailsRequest: NSObject {
         
         requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
             
-            if let accessToken = responseInfo?["access_token"] as? String {
-                
-                self.token = accessToken
-                
-                completion()
-            }
+//            println(responseInfo)
+//            
+//            var firstItemInArray = responseInfo!["user"] as! [String:AnyObject]
+//            
+//            var accessTokenString = firstItemInArray["access_token"] as! String
+//            
+//            println("RegisterWithCompletion 1: \(accessTokenString)")
+//            
+//            if let insideResponseInfoArray = responseInfo?["user"] as? [String:AnyObject] {
+//                
+//                println("RegisterWithCompletion 2: \(insideResponseInfoArray)")
+//                
+//                if let accessToken = insideResponseInfoArray["access_token"] as? String {
+//                    
+//                    println("RegisterWithCompletion 3: \(accessToken)")
+//            
+//                    self.token = accessToken
+//
+//                    completion()
+//                }
+//                
+//            }
             
         })
         
+        completion()
+        
     }
-    func login(username: String, password: String) {
+    
+    func login(completion: () -> Void) {
      
         var info = [
             "method" : "POST",
-            "endpoint" : "login",
+            "endpoint" : "/users/login",
             "parameters" : [
                 
-                "username" : username,
-                "password" : password
+                "username" : username!,
+                "password" : password!
             ]
             
             ] as [String:AnyObject]
         
+        println(info)
+    
+        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+
+            println(responseInfo)
+            
+//            var firstItemInArray = responseInfo!["user"] as! [String:AnyObject]
+//            
+//            var accessTokenString = firstItemInArray["access_token"] as! String
+//            
+//            println("LoginWithCompletion 1: \(accessTokenString)")
+//            
+//            if let insideResponseInfoArray = responseInfo?["user"] as? [String:AnyObject] {
+//                
+//                println("LoginWithCompletion 2: \(insideResponseInfoArray)")
+//            
+//                if let accessToken = insideResponseInfoArray["access_token"] as? String {
+//            
+//                    self.token = accessToken
+//                    
+//                    completion()
+//                }
+//            }
+        })
         
+            
+            
+        completion()
         
     }
     
-    var imageLink: UIImage?
+    var imageLink: String?
     var providedAnswer: String?
     
     
-    func postImage(imageURL: String, answer: String) {
+    func postImage(completion: () -> Void) {
         
         var info = [
             "method" : "POST",
-            "endpoint" : "posts?",
+            "endpoint" : "/posts",
             "parameters" : [
                 
                 "imageURL" : imageLink!,
@@ -117,8 +163,12 @@ class RailsRequest: NSObject {
             
             println(responseInfo)
             
+           
+            
         })
-        
+    
+        completion()
+    
     }
     
     func requestWithInfo(info: [String:AnyObject], andCompletion completion: ((responseInfo: [String:AnyObject]?) -> Void)?) {

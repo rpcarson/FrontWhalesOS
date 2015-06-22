@@ -19,24 +19,23 @@ class InitialRegLogVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        
+        println("This is my token: \(RailsRequest.session().token)")
+        
+        if RailsRequest.session().token != nil {
+            
+            println(RailsRequest.session().token!)
+            
+            let homePage = self.storyboard?.instantiateViewControllerWithIdentifier("HP") as! HomePageVC
+            
+            self.navigationController?.pushViewController(homePage, animated: true)
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

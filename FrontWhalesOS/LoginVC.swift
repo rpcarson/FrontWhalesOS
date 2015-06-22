@@ -10,9 +10,12 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    @IBOutlet weak var nameField: CoolField!
     
-    
+    @IBOutlet weak var passField: CoolField!
+
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +37,28 @@ class LoginVC: UIViewController {
     }
     
 
+    @IBAction func loginAction(sender: FancyButton) {
+   
+        _sing.username = nameField.text
+        _sing.password = passField.text
+       
+        println("button")
+        println(passField.text)
+        
 
+        _sing.login { () -> Void in
+            
+            let homePage = self.storyboard?.instantiateViewControllerWithIdentifier("HP") as! HomePageVC
+            self.presentViewController(homePage, animated: true, completion: nil)
+            
+            println("Is this working?")
+        }
+        
+    }
     
-    
-
 }
+
+    
+    
+
+

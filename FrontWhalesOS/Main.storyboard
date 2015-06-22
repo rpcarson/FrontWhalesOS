@@ -134,43 +134,50 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRZ-pi-waa" customClass="Border" customModule="FrontWhalesOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWQ-ZG-TLx" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="500" width="480" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="FzX-OT-Fai"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Philosopher-Bold" family="Philosopher" pointSize="26"/>
+                                        <state key="normal" title="REGISTER">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.14902000130000001" green="0.65881997349999999" blue="0.96863001589999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registerAction:" destination="NmC-QZ-den" eventType="touchUpInside" id="Jg8-Rj-OGG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWQ-ZG-TLx" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
-                                <rect key="frame" x="60" y="500" width="480" height="40"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="FzX-OT-Fai"/>
+                                    <constraint firstItem="iWQ-ZG-TLx" firstAttribute="leading" secondItem="ZRZ-pi-waa" secondAttribute="leading" constant="60" id="K4C-Z3-oxT"/>
+                                    <constraint firstAttribute="bottom" secondItem="iWQ-ZG-TLx" secondAttribute="bottom" constant="60" id="UO9-Be-vGJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="iWQ-ZG-TLx" secondAttribute="trailing" constant="60" id="dbA-gQ-AnD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Philosopher-Bold" family="Philosopher" pointSize="26"/>
-                                <state key="normal" title="REGISTER">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.14902000130000001" green="0.65881997349999999" blue="0.96863001589999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
-                                        <real key="value" value="17"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="registerAction:" destination="NmC-QZ-den" eventType="touchUpInside" id="Jg8-Rj-OGG"/>
-                                </connections>
-                            </button>
+                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jar-nl-Cd8" customClass="CoolField" customModule="FrontWhalesOS" customModuleProvider="target">
                                 <rect key="frame" x="60" y="150" width="480" height="40"/>
                                 <constraints>
@@ -238,28 +245,22 @@
                             <constraint firstAttribute="trailing" secondItem="LCF-i6-yao" secondAttribute="trailing" constant="60" id="NVJ-Gb-kbo"/>
                             <constraint firstItem="ZRZ-pi-waa" firstAttribute="top" secondItem="jrj-BY-TwC" secondAttribute="top" id="SUX-DD-wh4"/>
                             <constraint firstItem="ZRZ-pi-waa" firstAttribute="top" secondItem="Jar-nl-Cd8" secondAttribute="bottom" id="T3q-Sh-In3"/>
-                            <constraint firstItem="iWQ-ZG-TLx" firstAttribute="leading" secondItem="jrj-BY-TwC" secondAttribute="leading" constant="60" id="X2i-Z8-6MU"/>
-                            <constraint firstItem="tKU-r6-DNn" firstAttribute="top" secondItem="iWQ-ZG-TLx" secondAttribute="bottom" constant="60" id="evo-mZ-080"/>
                             <constraint firstAttribute="trailing" secondItem="ZRZ-pi-waa" secondAttribute="trailing" id="exA-Or-6xM"/>
                             <constraint firstItem="Rdj-uc-hwy" firstAttribute="leading" secondItem="jrj-BY-TwC" secondAttribute="leading" constant="60" id="krX-X0-Oh2"/>
-                            <constraint firstAttribute="centerX" secondItem="iWQ-ZG-TLx" secondAttribute="centerX" id="lId-kd-CTZ"/>
                             <constraint firstItem="LCF-i6-yao" firstAttribute="leading" secondItem="jrj-BY-TwC" secondAttribute="leading" constant="60" id="nIz-HQ-YOG"/>
-                            <constraint firstItem="iWQ-ZG-TLx" firstAttribute="top" secondItem="ZRZ-pi-waa" secondAttribute="bottom" id="odq-VT-Mpb"/>
                             <constraint firstItem="ZRZ-pi-waa" firstAttribute="leading" secondItem="jrj-BY-TwC" secondAttribute="leading" id="sNp-Y5-LF9"/>
                             <constraint firstAttribute="trailing" secondItem="Rdj-uc-hwy" secondAttribute="trailing" constant="60" id="tNJ-ug-VPo"/>
-                            <constraint firstAttribute="trailing" secondItem="iWQ-ZG-TLx" secondAttribute="trailing" constant="60" id="vqa-kR-rm9"/>
                             <constraint firstAttribute="trailing" secondItem="Jar-nl-Cd8" secondAttribute="trailing" constant="60" id="x2T-da-2EU"/>
                             <constraint firstItem="LCF-i6-yao" firstAttribute="top" secondItem="Jar-nl-Cd8" secondAttribute="bottom" constant="30" id="yw3-8F-RFd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="T3q-Sh-In3"/>
-                                <exclude reference="odq-VT-Mpb"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="bottomConstraint" destination="evo-mZ-080" id="hrK-0e-Mui"/>
+                        <outlet property="bottomConstraint" destination="UO9-Be-vGJ" id="u2c-AU-EMy"/>
                         <outlet property="emailField" destination="Jar-nl-Cd8" id="dlg-0z-Uzf"/>
                         <outlet property="passwordField" destination="LCF-i6-yao" id="5rA-85-2ZY"/>
                         <outlet property="usernameField" destination="Rdj-uc-hwy" id="ZTh-QD-Tta"/>
@@ -283,119 +284,137 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9CX-Xh-TX7" customClass="Border" customModule="FrontWhalesOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dbk-5R-xvc" customClass="CoolField" customModule="FrontWhalesOS" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="60" width="480" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="9eC-2q-Udz"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="P7p-FB-3je"/>
+                                            <constraint firstAttribute="height" constant="40" id="Ug4-T0-0wi"/>
+                                            <constraint firstAttribute="height" constant="40" id="uTb-gX-7DH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="P7p-FB-3je"/>
+                                                <exclude reference="Ug4-T0-0wi"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-nl-D7R" customClass="CoolField" customModule="FrontWhalesOS" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="130" width="480" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="EPh-kH-u1j"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="JIC-gM-h0b"/>
+                                            <constraint firstAttribute="height" constant="40" id="b9C-8w-5sH"/>
+                                            <constraint firstAttribute="height" constant="40" id="egh-mp-A3y"/>
+                                            <constraint firstAttribute="height" constant="40" id="gZ3-hj-p1p"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="JIC-gM-h0b"/>
+                                                <exclude reference="egh-mp-A3y"/>
+                                                <exclude reference="gZ3-hj-p1p"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYF-Xl-2lX" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="500" width="480" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="CtE-GE-Zae"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Ni5-5q-aFa"/>
+                                            <constraint firstAttribute="height" constant="40" id="Rmh-C8-VmO"/>
+                                            <constraint firstAttribute="height" constant="40" id="gj0-PX-60x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Philosopher-Bold" family="Philosopher" pointSize="26"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.14902000130000001" green="0.65881997349999999" blue="0.96863001589999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="CtE-GE-Zae"/>
+                                                <exclude reference="Rmh-C8-VmO"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="loginAction:" destination="YhD-Zb-fuP" eventType="touchUpInside" id="DJw-YM-smb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dpY-nl-D7R" firstAttribute="top" secondItem="Dbk-5R-xvc" secondAttribute="bottom" constant="30" id="1MU-sH-kwf"/>
+                                    <constraint firstItem="Dbk-5R-xvc" firstAttribute="leading" secondItem="9CX-Xh-TX7" secondAttribute="leading" constant="60" id="Ays-uy-R57"/>
+                                    <constraint firstAttribute="bottom" secondItem="EYF-Xl-2lX" secondAttribute="bottom" constant="60" id="BY3-d0-pOA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dbk-5R-xvc" secondAttribute="trailing" constant="60" id="Eoq-yv-Mbv"/>
+                                    <constraint firstAttribute="trailing" secondItem="dpY-nl-D7R" secondAttribute="trailing" constant="60" id="ILW-fy-Xai"/>
+                                    <constraint firstItem="dpY-nl-D7R" firstAttribute="leading" secondItem="9CX-Xh-TX7" secondAttribute="leading" constant="60" id="Sga-ty-WjX"/>
+                                    <constraint firstItem="EYF-Xl-2lX" firstAttribute="leading" secondItem="9CX-Xh-TX7" secondAttribute="leading" constant="60" id="d7K-1G-9he"/>
+                                    <constraint firstItem="Dbk-5R-xvc" firstAttribute="top" secondItem="9CX-Xh-TX7" secondAttribute="top" constant="60" id="gHr-kD-y7t"/>
+                                    <constraint firstAttribute="trailing" secondItem="EYF-Xl-2lX" secondAttribute="trailing" constant="60" id="yZ7-NQ-tt4"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYF-Xl-2lX" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
-                                <rect key="frame" x="60" y="500" width="480" height="40"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="CtE-GE-Zae"/>
-                                    <constraint firstAttribute="height" constant="40" id="Rmh-C8-VmO"/>
-                                    <constraint firstAttribute="height" constant="40" id="gj0-PX-60x"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Philosopher-Bold" family="Philosopher" pointSize="26"/>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.14902000130000001" green="0.65881997349999999" blue="0.96863001589999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
-                                        <real key="value" value="17"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="CtE-GE-Zae"/>
-                                        <exclude reference="Rmh-C8-VmO"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dbk-5R-xvc" customClass="CoolField" customModule="FrontWhalesOS" customModuleProvider="target">
-                                <rect key="frame" x="60" y="80" width="480" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="P7p-FB-3je"/>
-                                    <constraint firstAttribute="height" constant="40" id="Ug4-T0-0wi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="14"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-nl-D7R" customClass="CoolField" customModule="FrontWhalesOS" customModuleProvider="target">
-                                <rect key="frame" x="60" y="150" width="480" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="JIC-gM-h0b"/>
-                                    <constraint firstAttribute="height" constant="40" id="egh-mp-A3y"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="14"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ckG-Lm-FMF" firstAttribute="top" secondItem="EYF-Xl-2lX" secondAttribute="bottom" constant="60" id="0US-Mg-OUN"/>
-                            <constraint firstItem="ckG-Lm-FMF" firstAttribute="top" secondItem="EYF-Xl-2lX" secondAttribute="bottom" constant="60" id="1AA-no-HCd"/>
-                            <constraint firstItem="Dbk-5R-xvc" firstAttribute="leading" secondItem="6mm-QM-NSu" secondAttribute="leading" constant="60" id="1l9-7P-gId"/>
-                            <constraint firstItem="dpY-nl-D7R" firstAttribute="leading" secondItem="6mm-QM-NSu" secondAttribute="leading" constant="60" id="54c-sY-UVy"/>
-                            <constraint firstAttribute="trailing" secondItem="EYF-Xl-2lX" secondAttribute="trailing" constant="60" id="8T2-V5-tr9"/>
-                            <constraint firstItem="dpY-nl-D7R" firstAttribute="top" secondItem="Dbk-5R-xvc" secondAttribute="bottom" constant="30" id="FS3-j7-9za"/>
-                            <constraint firstItem="Dbk-5R-xvc" firstAttribute="top" secondItem="3Mw-Jm-cQB" secondAttribute="bottom" constant="60" id="IVB-e0-V5t"/>
+                            <constraint firstItem="ckG-Lm-FMF" firstAttribute="top" secondItem="9CX-Xh-TX7" secondAttribute="bottom" id="HIo-1f-bc4"/>
                             <constraint firstItem="9CX-Xh-TX7" firstAttribute="leading" secondItem="6mm-QM-NSu" secondAttribute="leading" id="Idl-WS-96o"/>
                             <constraint firstItem="9CX-Xh-TX7" firstAttribute="top" secondItem="6mm-QM-NSu" secondAttribute="top" id="MUg-7Z-Fed"/>
-                            <constraint firstAttribute="trailing" secondItem="EYF-Xl-2lX" secondAttribute="trailing" constant="60" id="SgC-sM-Wzv"/>
-                            <constraint firstItem="EYF-Xl-2lX" firstAttribute="leading" secondItem="6mm-QM-NSu" secondAttribute="leading" constant="60" id="ayx-Iu-FOq"/>
-                            <constraint firstAttribute="trailing" secondItem="Dbk-5R-xvc" secondAttribute="trailing" constant="60" id="kW0-aO-rn8"/>
-                            <constraint firstAttribute="trailing" secondItem="dpY-nl-D7R" secondAttribute="trailing" constant="60" id="mKU-cC-UNQ"/>
-                            <constraint firstItem="EYF-Xl-2lX" firstAttribute="leading" secondItem="6mm-QM-NSu" secondAttribute="leading" constant="60" id="pnB-fR-UbH"/>
                             <constraint firstAttribute="trailing" secondItem="9CX-Xh-TX7" secondAttribute="trailing" id="qpM-B7-3fV"/>
-                            <constraint firstItem="ckG-Lm-FMF" firstAttribute="top" secondItem="9CX-Xh-TX7" secondAttribute="bottom" id="tDE-JA-Lgf"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="SgC-sM-Wzv"/>
-                                <exclude reference="ayx-Iu-FOq"/>
-                                <exclude reference="0US-Mg-OUN"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="HMP-vI-v4V"/>
                     <connections>
-                        <outlet property="bottomConstraint" destination="1AA-no-HCd" id="6Va-Gx-30F"/>
+                        <outlet property="bottomConstraint" destination="BY3-d0-pOA" id="0lb-R3-fJX"/>
+                        <outlet property="nameField" destination="Dbk-5R-xvc" id="ZYM-kZ-WiI"/>
+                        <outlet property="passField" destination="dpY-nl-D7R" id="rgu-xB-CrV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reZ-F2-WHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -405,7 +424,7 @@
         <!--Home PageVC-->
         <scene sceneID="cCs-F5-Jyo">
             <objects>
-                <viewController id="TIo-2G-Bzx" customClass="HomePageVC" customModule="FrontWhalesOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HP" id="TIo-2G-Bzx" customClass="HomePageVC" customModule="FrontWhalesOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XKq-Pw-vd0"/>
                         <viewControllerLayoutGuide type="bottom" id="kkn-ZW-r0g"/>
@@ -414,6 +433,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJI-Gb-60i" customClass="Border" customModule="FrontWhalesOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XL-BP-Vb6">
+                                        <rect key="frame" x="60" y="93" width="300" height="40"/>
+                                        <fontDescription key="fontDescription" name="Philosopher-Bold" family="Philosopher" pointSize="30"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="0.36862999200000002" green="0.74901998039999995" blue="0.37646999959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNd-QO-D65" customClass="FancyButton" customModule="FrontWhalesOS" customModuleProvider="target">
                                 <rect key="frame" x="60" y="420" width="480" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -482,23 +518,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XL-BP-Vb6">
-                                <rect key="frame" x="60" y="93" width="300" height="40"/>
-                                <fontDescription key="fontDescription" name="Philosopher-Bold" family="Philosopher" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UNd-QO-D65" secondAttribute="trailing" constant="60" id="6nS-Gi-Hp1"/>
+                            <constraint firstItem="kkn-ZW-r0g" firstAttribute="top" secondItem="KJI-Gb-60i" secondAttribute="bottom" id="BCT-hF-6ol"/>
+                            <constraint firstAttribute="trailing" secondItem="KJI-Gb-60i" secondAttribute="trailing" id="S2i-TS-7mp"/>
                             <constraint firstAttribute="trailing" secondItem="aST-Qc-Dnt" secondAttribute="trailing" constant="60" id="YBA-pZ-Vx1"/>
+                            <constraint firstItem="KJI-Gb-60i" firstAttribute="top" secondItem="dfb-Y7-AkZ" secondAttribute="top" id="aEB-90-A7p"/>
                             <constraint firstItem="kkn-ZW-r0g" firstAttribute="top" secondItem="UNd-QO-D65" secondAttribute="bottom" constant="140" id="bRu-Ws-fuo"/>
+                            <constraint firstItem="KJI-Gb-60i" firstAttribute="leading" secondItem="dfb-Y7-AkZ" secondAttribute="leading" id="chx-l3-BoE"/>
                             <constraint firstItem="aST-Qc-Dnt" firstAttribute="leading" secondItem="dfb-Y7-AkZ" secondAttribute="leading" constant="60" id="e1z-b5-ayv"/>
                             <constraint firstItem="UNd-QO-D65" firstAttribute="leading" secondItem="dfb-Y7-AkZ" secondAttribute="leading" constant="60" id="irs-X3-0IB"/>
                             <constraint firstItem="UNd-QO-D65" firstAttribute="top" secondItem="aST-Qc-Dnt" secondAttribute="bottom" constant="45" id="kiv-ZD-lKE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="usernameDisplay" destination="4XL-BP-Vb6" id="0YE-AM-7FU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joJ-Pp-yCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,6 +553,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gm3-uD-MlX" customClass="Border" customModule="FrontWhalesOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="0.36862999200000002" green="0.74901998039999995" blue="0.37646999959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vo7-Kz-kDw">
                                 <rect key="frame" x="45" y="50" width="510" height="360"/>
                             </imageView>
@@ -551,6 +597,9 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="postPicture:" destination="rGF-aY-jac" eventType="touchUpInside" id="fLH-yN-eox"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGy-fC-sxr">
                                 <rect key="frame" x="60" y="430" width="480" height="40"/>
@@ -564,11 +613,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2GN-vH-P3x" firstAttribute="leading" secondItem="gOg-my-lp8" secondAttribute="leading" constant="60" id="0kK-XC-Ou5"/>
+                            <constraint firstAttribute="trailing" secondItem="Gm3-uD-MlX" secondAttribute="trailing" id="1k5-Ap-VSK"/>
                             <constraint firstAttribute="trailing" secondItem="LGy-fC-sxr" secondAttribute="trailing" constant="60" id="8Ok-uv-Eiz"/>
                             <constraint firstItem="Vo7-Kz-kDw" firstAttribute="leading" secondItem="gOg-my-lp8" secondAttribute="leading" constant="45" id="CbD-hv-e4O"/>
                             <constraint firstAttribute="trailing" secondItem="Vo7-Kz-kDw" secondAttribute="trailing" constant="45" id="Iad-aI-bL2"/>
                             <constraint firstItem="Vo7-Kz-kDw" firstAttribute="top" secondItem="20M-Y3-aR8" secondAttribute="bottom" constant="30" id="KFY-7g-egs"/>
+                            <constraint firstItem="Gm3-uD-MlX" firstAttribute="leading" secondItem="gOg-my-lp8" secondAttribute="leading" id="MH0-nR-yIX"/>
+                            <constraint firstItem="UQm-b8-i8u" firstAttribute="top" secondItem="Gm3-uD-MlX" secondAttribute="bottom" id="OZf-AW-LY2"/>
                             <constraint firstItem="2GN-vH-P3x" firstAttribute="top" secondItem="Vo7-Kz-kDw" secondAttribute="bottom" constant="60" id="R29-of-95j"/>
+                            <constraint firstItem="Gm3-uD-MlX" firstAttribute="top" secondItem="gOg-my-lp8" secondAttribute="top" id="S5u-ii-Lvd"/>
                             <constraint firstItem="LGy-fC-sxr" firstAttribute="leading" secondItem="gOg-my-lp8" secondAttribute="leading" constant="60" id="SW9-ZE-7Fo"/>
                             <constraint firstItem="LGy-fC-sxr" firstAttribute="top" secondItem="Vo7-Kz-kDw" secondAttribute="bottom" constant="20" id="VJ2-8D-dt3"/>
                             <constraint firstItem="LGy-fC-sxr" firstAttribute="top" secondItem="Vo7-Kz-kDw" secondAttribute="bottom" constant="20" id="ZbO-hC-Chc"/>
@@ -584,6 +637,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="answerField" destination="LGy-fC-sxr" id="qRE-Ui-ohQ"/>
                         <outlet property="bottomConstraint" destination="non-Q9-4Jt" id="8EP-tO-Plj"/>
                         <outlet property="imagePreview" destination="Vo7-Kz-kDw" id="7mT-Y7-IuR"/>
                     </connections>
@@ -591,6 +645,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TND-el-wNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3315" y="419"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fbu-Di-ghx">
+            <objects>
+                <viewController storyboardIdentifier="SubmissionComplete" id="gQ4-eU-UYJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TnK-aA-avs"/>
+                        <viewControllerLayoutGuide type="bottom" id="r2p-MV-a0n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bzq-hm-ABh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="congrats you just submitted and picture (probably)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obs-3M-loZ">
+                                <rect key="frame" x="60" y="80" width="392" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="obs-3M-loZ" secondAttribute="trailing" constant="60" id="90Y-CG-gls"/>
+                            <constraint firstItem="obs-3M-loZ" firstAttribute="top" secondItem="TnK-aA-avs" secondAttribute="bottom" constant="60" id="GYU-JF-fpJ"/>
+                            <constraint firstItem="obs-3M-loZ" firstAttribute="leading" secondItem="Bzq-hm-ABh" secondAttribute="leading" constant="60" id="xeJ-fU-Yyc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iRw-xq-W4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3980" y="419"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NAA-lq-Ffk">

@@ -12,14 +12,20 @@ import AFNetworking
 import AFAmazonS3Manager
 
 
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+     
+    
+    @IBOutlet weak var answerField: UITextField!
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
-    var imagePrev: UIImage!
     
-    var myImage: UIImage!
+    
+    var imagePrev: UIImage?
+    
+    var myImage: UIImage?
     
     var answerString: String?
     
@@ -32,6 +38,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(animated: Bool) {
         
         imagePreview.image = imagePrev
+        
+        answerString = answerField.text 
         
     }
     
@@ -67,7 +75,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
-//            saveImageToS3(image)
+            saveImageToS3(image)
             
             imagePrev = image
             
@@ -77,74 +85,90 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+   
     
-    let s3Manager = AFAmazonS3Manager(accessKeyID: "AKIAIHUPEUNXKX7YARKA", secret: "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")
+    
+    let s3Manager = AFAmazonS3Manager(accessKeyID: accessKey, secret: secret)
     
     
-//        func saveImageToS3(image: UIImage) {
-//    
-//        s3Manager.requestSerializer.bucket = "frontwhalesos"
-//        s3Manager.requestSerializer.region = AFAmazonS3USStandardRegion
-//        
-//        let timestamp = Int(NSDate().timeIntervalSince1970)
-//        
-//        let imageName = "myImage_\(timestamp)"
-//        
-//        let imageData = UIImagePNGRepresentation(image)
-//        
-//        //        amazonS3Manager.putObject(imageData, destinationPath: imageName + ".png", acl: nil)
-//        
-//        
-//        if let documentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first as? String {
-//            
-//            let filePath = documentPath.stringByAppendingPathComponent(imageName + ".png")
-//            
-//            println(filePath)
-//            
-//            imageData.writeToFile(filePath, atomically: false)
-//            
-//            let fileURL = NSURL(fileURLWithPath: filePath)
-//            
-//            //            amazonS3Manager.putObject(fileURL!, destinationPath: imageName + ".png", acl: AmazonS3PredefinedACL.Public)
-//            
-//            s3Manager.putObjectWithFile(filePath, destinationPath: imageName + ".png", parameters: nil, progress: { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) -> Void in
-//                
-//                
-//                let percentageWritten = (CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)) * 100.0
-//                
-//                println("Uploaded \(percentageWritten)%")
-//                
-//                
-//                }, success: { (responseObject) -> Void in
-//                    
-//                    let info = responseObject as! AFAmazonS3ResponseObject
-//                    
-//                    println("\(info.URL)")
-//                    
-//                    self.imageURL = info.URL.absoluteString
-//                    
-//                }, failure: { (error) -> Void in
-//                    
-//                    println("\(error)")
-//                    
-//            })
-//            
-//        }
-//        
-//    }
+        func saveImageToS3(image: UIImage) {
+    
+        s3Manager.requestSerializer.bucket = bucket
+        s3Manager.requestSerializer.region = AFAmazonS3USStandardRegion
+        
+        let timestamp = Int(NSDate().timeIntervalSince1970)
+        
+        let imageName = "myImage_\(timestamp)"
+        
+        let imageData = UIImagePNGRepresentation(image)
+        
+        //        amazonS3Manager.putObject(imageData, destinationPath: imageName + ".png", acl: nil)
+        
+        
+        if let documentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first as? String {
+            
+            let filePath = documentPath.stringByAppendingPathComponent(imageName + ".png")
+            
+            println(filePath)
+            
+            imageData.writeToFile(filePath, atomically: false)
+            
+            let fileURL = NSURL(fileURLWithPath: filePath)
+            
+            //            amazonS3Manager.putObject(fileURL!, destinationPath: imageName + ".png", acl: AmazonS3PredefinedACL.Public)
+            
+            s3Manager.putObjectWithFile(filePath, destinationPath: imageName + ".png", parameters: nil, progress: { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) -> Void in
+                
+                
+                let percentageWritten = (CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)) * 100.0
+                
+                println("Uploaded \(percentageWritten)%")
+                
+                
+                }, success: { (responseObject) -> Void in
+                    
+                    let info = responseObject as! AFAmazonS3ResponseObject
+                    
+                    println("\(info.URL)")
+                    
+                    self.imageURL = info.URL.absoluteString
+                    
+                }, failure: { (error) -> Void in
+                    
+                    println("\(error)")
+                    
+            })
+            
+        }
+        
+    }
+   
+    @IBAction func postPicture(sender: FancyButton) {
+   
+    postToRails()
+    
+    }
     
     func postToRails() {
      
-        if answerString == nil {
-            
-            println("u suck")
-            
-            
-        }else{
+       _sing.imageLink = imageURL
+        _sing.providedAnswer = answerField.text
+        
     
-//            saveImageToS3(myImage)
+            saveImageToS3(myImage!)
             
-            _sing.postImage(imageURL!, answer: answerString!)
+            _sing.postImage({ () -> Void in
+                
+//                let HPVC = self.storyboard!.instantiateViewControllerWithIdentifier("HP") as! HomePageVC
+                
+//                self.dismissViewControllerAnimated(true, completion: { () -> Void in
+//                    
+//                    println("probably sumbitted photo successfully")
+//                    
+//                })
+            
+                
+            })
         
         }
         
@@ -153,4 +177,4 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   
     
     
-}
+

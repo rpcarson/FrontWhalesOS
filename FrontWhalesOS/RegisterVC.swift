@@ -10,6 +10,7 @@ import UIKit
 
 class RegisterVC: UIViewController {
     
+    
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     
@@ -50,9 +51,14 @@ class RegisterVC: UIViewController {
             
         if _sing.username != nil && _sing.email != nil && _sing.password != nil {
             
-//            let storyboard = UIStoryboard(name: "Login", bundle: nil)
-            let vc = storyboard!.instantiateViewControllerWithIdentifier("Login") as! UIViewController
-            self.presentViewController(vc, animated: true, completion: nil)
+            self.dismissViewControllerAnimated(false, completion: { () -> Void in
+                
+                let vc = self.storyboard?.instantiateViewControllerWithIdentifier("Login") as! UIViewController
+                self.presentViewController(vc, animated: true, completion: nil)
+                
+            })
+            
+           
             
         }
 

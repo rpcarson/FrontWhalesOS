@@ -10,10 +10,14 @@ import UIKit
 
 class HomePageVC: UIViewController {
 
+   
+    @IBOutlet weak var usernameDisplay: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
 
     override func didReceiveMemoryWarning() {
