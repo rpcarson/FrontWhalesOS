@@ -24,7 +24,7 @@ class InitialRegLogVC: UIViewController {
         
         if RailsRequest.session().token != nil {
             
-            println(RailsRequest.session().token!)
+            println(RailsRequest.session().token)
             
             let homePage = self.storyboard?.instantiateViewControllerWithIdentifier("HP") as! HomePageVC
             

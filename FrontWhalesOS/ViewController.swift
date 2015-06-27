@@ -85,8 +85,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-   
-    
     
     let s3Manager = AFAmazonS3Manager(accessKeyID: accessKey, secret: secret)
     
@@ -155,8 +153,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         _sing.providedAnswer = answerField.text
         
     
-            saveImageToS3(myImage!)
-            
+//            saveImageToS3(myImage!)
+        
             _sing.postImage({ () -> Void in
                 
 //                let HPVC = self.storyboard!.instantiateViewControllerWithIdentifier("HP") as! HomePageVC
@@ -174,7 +172,3 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-  
-    
-    
-

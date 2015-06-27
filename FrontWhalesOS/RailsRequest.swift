@@ -70,27 +70,19 @@ class RailsRequest: NSObject {
         requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
             
 //            println(responseInfo)
-//            
-//            var firstItemInArray = responseInfo!["user"] as! [String:AnyObject]
-//            
-//            var accessTokenString = firstItemInArray["access_token"] as! String
-//            
-//            println("RegisterWithCompletion 1: \(accessTokenString)")
-//            
-//            if let insideResponseInfoArray = responseInfo?["user"] as? [String:AnyObject] {
-//                
-//                println("RegisterWithCompletion 2: \(insideResponseInfoArray)")
-//                
-//                if let accessToken = insideResponseInfoArray["access_token"] as? String {
-//                    
-//                    println("RegisterWithCompletion 3: \(accessToken)")
-//            
-//                    self.token = accessToken
 //
-//                    completion()
-//                }
-//                
-//            }
+            if let user = responseInfo?["user"] as? [String:AnyObject] {
+                
+                if let accessToken = user["access_token"] as? String {
+                    
+                    println("accessToken \(accessToken)")
+            
+                    self.token = accessToken
+
+                    completion()
+                }
+
+            }
             
         })
         
@@ -114,26 +106,22 @@ class RailsRequest: NSObject {
         println(info)
     
         requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-
-            println(responseInfo)
             
-//            var firstItemInArray = responseInfo!["user"] as! [String:AnyObject]
-//            
-//            var accessTokenString = firstItemInArray["access_token"] as! String
-//            
-//            println("LoginWithCompletion 1: \(accessTokenString)")
-//            
-//            if let insideResponseInfoArray = responseInfo?["user"] as? [String:AnyObject] {
-//                
-//                println("LoginWithCompletion 2: \(insideResponseInfoArray)")
-//            
-//                if let accessToken = insideResponseInfoArray["access_token"] as? String {
-//            
-//                    self.token = accessToken
-//                    
-//                    completion()
-//                }
-//            }
+//            println(responseInfo)
+//
+            if let user = responseInfo?["user"] as? [String:AnyObject] {
+                
+                if let accessToken = user["access_token"] as? String {
+                    
+                    println("accessToken \(accessToken)")
+                    
+                    self.token = accessToken
+                    
+                    completion()
+                }
+                
+            }
+            
         })
         
             
@@ -153,7 +141,7 @@ class RailsRequest: NSObject {
             "endpoint" : "/posts",
             "parameters" : [
                 
-                "imageURL" : imageLink!,
+                "image_url" : imageLink!,
                 "answer" : providedAnswer!
         ]
         
@@ -186,6 +174,8 @@ class RailsRequest: NSObject {
                 request.setValue(token, forHTTPHeaderField: "Authorization")
                 
             }
+            
+            // body parameters for POST request
             
             let bodyInfo = info["parameters"] as! [String:AnyObject]
             let requestData = NSJSONSerialization.dataWithJSONObject(bodyInfo, options: NSJSONWritingOptions.allZeros, error: nil)
